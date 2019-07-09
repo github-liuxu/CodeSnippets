@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ldx_saxbox</string>
+	<string>ldx_enumForder</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -17,11 +17,11 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>470BDB0F-BD4A-467A-9F93-1B1BCE895BA2</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>遍历文件</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code Snippet</string>
+	<string>NSFileManager</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

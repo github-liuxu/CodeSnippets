@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ldx_buttonCreate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+self.button.frame = CGRectMake(&lt;#CGFloat x#&gt;, &lt;#CGFloat y#&gt;, &lt;#CGFloat width#&gt;, &lt;#CGFloat height#&gt;);
+    [self.button setImage:&lt;#(nullable UIImage *)#&gt; forState:UIControlStateNormal];
+    [self.button setImage:&lt;#(nullable UIImage *)#&gt; forState:UIControlStateSelected];
+    [self.button setTitle:&lt;#(nullable NSString *)#&gt; forState:UIControlStateNormal];
+    [self.button setTitleColor:&lt;#(nullable UIColor *)#&gt; forState:UIControlStateNormal];
+    [self.button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3803AE99-9215-43FE-8C5A-6CC220E4925E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>创建button</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIButton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

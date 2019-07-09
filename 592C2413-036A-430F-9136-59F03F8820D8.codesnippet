@@ -3,29 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ldx_share</string>
+	<string>ldx_scrollView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (instancetype)defaultManager {
-    static &lt;# NSObject *#&gt; * instance;
-    static dispatch_once_t onceToken;
-    dispatch_once(&amp;onceToken, ^{
-        instance = [[self alloc] init];
-    });
-    
-    return instance;
-}</string>
+	<string>self.scrollView = [[UIScrollView alloc] initWithFrame:&lt;#(CGRect)#&gt;];
+        self.scrollView.contentSize = CGSizeMake(&lt;#CGFloat width#&gt;, &lt;#CGFloat height#&gt;);
+        self.scrollView.backgroundColor = [UIColor clearColor];
+        self.scrollView.bounces = NO;
+        self.scrollView.alwaysBounceHorizontal = YES;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8A892BF3-997C-4E6F-8AE9-FEEAF99A9784</string>
+	<string>592C2413-036A-430F-9136-59F03F8820D8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>单例</string>
+	<string>UIScrollView</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>+ (instancetype)defaultManager</string>
+	<string>UIScrollView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
