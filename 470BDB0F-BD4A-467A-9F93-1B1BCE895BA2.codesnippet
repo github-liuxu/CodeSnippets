@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>470BDB0F-BD4A-467A-9F93-1B1BCE895BA2</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>遍历文件名</string>
 	<key>IDECodeSnippetTitle</key>

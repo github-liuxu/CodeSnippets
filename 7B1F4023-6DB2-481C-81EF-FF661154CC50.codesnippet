@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>__weakSelf</string>
+	<string>ldx_tap</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>__weak typeof(self)weakSelf = self;</string>
+	<string>UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTapClick:)];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>742E554C-1F93-4856-BDD8-D7D58BA6FFE1</string>
+	<string>7B1F4023-6DB2-481C-81EF-FF661154CC50</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>__weak typeof(self)weakSelf = self;</string>
+	<string>轻点手势</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code Snippet</string>
+	<string>UITapGestureRecognizer</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

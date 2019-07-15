@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>592C2413-036A-430F-9136-59F03F8820D8</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>UIScrollView</string>
 	<key>IDECodeSnippetTitle</key>
