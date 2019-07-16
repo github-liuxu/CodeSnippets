@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ldx_label</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UILabel *label = [UILabel new];
+    label.textColor = textColor;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = text;
+    UIFont *font;
+    if (![UIFont fontWithName:@"PingFangSC-Semibold" size:fontSize]) {
+        font = [UIFont boldSystemFontOfSize:fontSize];
+    } else {
+        font = [UIFont fontWithName:@"PingFangSC-Semibold" size:fontSize];
+    }
+    label.font = font;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7B1D283C-492E-4C25-8B25-6C1737D70257</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>创建Label</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UILabel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

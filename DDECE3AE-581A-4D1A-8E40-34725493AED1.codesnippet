@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ldx_statusBar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@property (nonatomic, assign) BOOL hiddenStatusBar;
+- (void)setHiddenStatusBar:(BOOL)hiddenStatusBar {
+    _hiddenStatusBar = hiddenStatusBar;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+-(BOOL)prefersStatusBarHidden {
+    return self.hiddenStatusBar;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DDECE3AE-581A-4D1A-8E40-34725493AED1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>是否隐藏状态栏</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>hiddenStatusBar</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

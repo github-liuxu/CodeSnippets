@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ldx_createTimeline</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (NvsTimeline *)createTimeline:(NvEditMode)editMode {
+    NvsStreamingContext *context = [NvsStreamingContext sharedInstance];
+    NvsSize size = [NvTimelineUtils calculateTimelineSize:editMode];
+    NvsVideoResolution videoEditRes;
+    videoEditRes.imageWidth = size.width;
+    videoEditRes.imageHeight = size.height;
+    videoEditRes.imagePAR = (NvsRational){1, 1};
+    NvsRational videoFps = {25, 1};
+    NvsAudioResolution audioEditRes;
+    audioEditRes.sampleRate = 48000;
+    audioEditRes.channelCount = 2;
+    audioEditRes.sampleFormat = NvsAudSmpFmt_S16;
+    NvsTimeline *timeline = [context createTimeline:&amp;videoEditRes videoFps:&amp;videoFps audioEditRes:&amp;audioEditRes];
+    [timeline appendVideoTrack];
+    [timeline appendAudioTrack]; //音乐轨道
+    [timeline appendAudioTrack]; //原音轨道
+    return timeline;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DEB3715E-D880-403B-94AC-437DF9944ED8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>NvTimelineCreate</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NvTimeline</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

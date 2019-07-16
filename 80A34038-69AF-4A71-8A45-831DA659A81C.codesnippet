@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ldx_collection</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        layout.itemSize = CGSizeMake(48*SCREENSCALE, 70*SCREENSCALE);
+        layout.minimumLineSpacing = 15*SCREENSCALE;
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0,0,0,0) collectionViewLayout:layout];
+        self.collectionView.backgroundColor = [UIColor clearColor];
+        self.collectionView.delegate = self;
+        self.collectionView.dataSource = self;
+        [self.collectionView registerClass:[NvFilterCell class] forCellWithReuseIdentifier:@"NvFilterCell"];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>80A34038-69AF-4A71-8A45-831DA659A81C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>创建collectionView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UICollectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
