@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ldx_downloadAssetFromiCloud</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)downloadAssetFromiCloud:(NvAlbumAsset *)selectAsset complate:(NvDownloadAsset)complate {
+    //资源在iCloud上
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTableInBundle(@"album.assetFromiCloud",@"NvAlbum",[NSBundle bundleForClass:self.class],nil)
+                                                                             message:NSLocalizedStringFromTableInBundle(@"album.download",@"NvAlbum",[NSBundle bundleForClass:self.class],nil)
+                                                                      preferredStyle:UIAlertControllerStyleAlert ];
+    //添加取消到UIAlertController中
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedStringFromTableInBundle(@"album.cancel",@"NvAlbum",[NSBundle bundleForClass:self.class],nil) style:UIAlertActionStyleDefault handler:^ (UIAlertAction *action){
+        selectAsset.isShowLayer = NO;
+        if (complate) {
+            complate(nil);
+        }
+    }];
+    [alertController addAction:cancelAction];
+    //添加确定到UIAlertController中
+    __weak typeof(self)weakSelf = self;
+    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:NSLocalizedStringFromTableInBundle(@"album.ok",@"NvAlbum",[NSBundle bundleForClass:self.class],nil) style:UIAlertActionStyleDefault handler:^ (UIAlertAction *action){
+        weakSelf.progress = [NvProgressViewController new];
+        [weakSelf.progress setCancelBlock:^{
+            selectAsset.isShowLayer = NO;
+            if (complate) {
+                complate(nil);
+            }
+            [[PHImageManager defaultManager] cancelImageRequest:weakSelf.nv_requestId];
+            [weakSelf dismissViewControllerAnimated:YES completion:NULL];
+        }];
+        
+        weakSelf.definesPresentationContext = YES;
+        weakSelf.progress.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        [weakSelf.navigationController presentViewController:weakSelf.progress animated:YES completion:NULL];
+        if (selectAsset.asset.mediaType == PHAssetMediaTypeVideo) {
+            PHVideoRequestOptions *option = [[PHVideoRequestOptions alloc]init];
+            option.networkAccessAllowed = YES;
+            option.version = PHVideoRequestOptionsVersionOriginal;
+            option.deliveryMode = PHVideoRequestOptionsDeliveryModeAutomatic;
+            option.progressHandler = ^(double progress, NSError *__nullable error, BOOL *stop, NSDictionary *__nullable info) {
+                NSLog(@"%f",progress);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    weakSelf.progress.progress = progress;
+                });
+            };
+            weakSelf.nv_requestId = [[PHImageManager defaultManager] requestAVAssetForVideo:selectAsset.asset options:option resultHandler:^(AVAsset * _Nullable asset1, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (asset1) {
+                        [NvToast showInfoWithMessage:NSLocalizedStringFromTableInBundle(@"album.finish",@"NvAlbum",[NSBundle bundleForClass:self.class],nil) inView:weakSelf.view];
+                        if (complate) {
+                            complate(selectAsset);
+                        }
+                    } else {
+                        if (![info[PHImageCancelledKey] boolValue]) {//如果不是取消
+                            [NvToast showInfoWithMessage:NSLocalizedStringFromTableInBundle(@"album.faild",@"NvAlbum",[NSBundle bundleForClass:self.class],nil) inView:weakSelf.view];
+                        }
+                        //点击cell的时候isShowLayer被设为yes，点击取消的时候要设为NO
+                        selectAsset.isShowLayer = NO;
+                        if (complate) {
+                            complate(nil);
+                        }
+                    }
+                    [weakSelf dismissViewControllerAnimated:YES completion:NULL];
+                    weakSelf.progress = nil;
+                });
+            }];
+        } else {
+            PHImageRequestOptions *options = [PHImageRequestOptions new];
+            options.resizeMode = PHImageRequestOptionsResizeModeFast;
+            options.version = PHImageRequestOptionsVersionOriginal;
+            options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+            options.networkAccessAllowed = YES;
+            options.progressHandler = ^(double progress, NSError *__nullable error, BOOL *stop, NSDictionary *__nullable info) {
+                NSLog(@"%f",progress);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    weakSelf.progress.progress = progress;
+                });
+            };
+            weakSelf.nv_requestId = [[PHImageManager defaultManager] requestImageDataForAsset:selectAsset.asset options:options resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (imageData) {
+                        [NvToast showInfoWithMessage:NSLocalizedStringFromTableInBundle(@"album.finish",@"NvAlbum",[NSBundle bundleForClass:self.class],nil) inView:weakSelf.view];
+                        if (complate) {
+                            complate(selectAsset);
+                        }
+                    } else {
+                        if (![info[PHImageCancelledKey] boolValue]) {//如果不是取消
+                            [NvToast showInfoWithMessage:NSLocalizedStringFromTableInBundle(@"album.faild",@"NvAlbum",[NSBundle bundleForClass:self.class],nil) inView:weakSelf.view];
+                        }
+                        selectAsset.isShowLayer = NO;
+                        if (complate) {
+                            complate(nil);
+                        }
+                    }
+                    [weakSelf dismissViewControllerAnimated:YES completion:NULL];
+                    weakSelf.progress = nil;
+                });
+            }];
+        }
+    }];
+    
+    [alertController addAction:OKAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>967A9617-8679-4F3E-B01C-5A3DD3C30061</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>下载iCloud资源</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>download iCloud asset</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
