@@ -17,7 +17,8 @@
         self.collectionView.backgroundColor = [UIColor clearColor];
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
-        [self.collectionView registerClass:[NvFilterCell class] forCellWithReuseIdentifier:@"NvFilterCell"];</string>
+        [self.collectionView registerClass:[NvFilterCell class] forCellWithReuseIdentifier:@"NvFilterCell"];
+[self.view addSubview:self.collectionView];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>80A34038-69AF-4A71-8A45-831DA659A81C</string>
 	<key>IDECodeSnippetLanguage</key>
