@@ -3,23 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ldx_responds</string>
+	<string>ldx_weekSharedInstance</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>if ([self.delegate respondsToSelector:@selector(&lt;#selector#&gt;)]) {
-[self.delegate ];
+	<string>+ (instancetype)sharedInstance
+{
+    static __weak &lt;# NSObject *#&gt; *instance;
+    &lt;# NSObject *#&gt; *strongInstance = instance;
+    @synchronized(self) {
+        if (strongInstance == nil) {
+            strongInstance = [[[self class] alloc] init];
+            instance = strongInstance;
+        }
+    }
+    return strongInstance;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8AC71F30-8A9F-4B3E-A6F1-A1C7E963A737</string>
+	<string>5D659B70-7719-4CD9-9C01-70FEDE231909</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>代理判断</string>
+	<string>弱引用单例</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>delegateResponds</string>
+	<string>weekShareInstance</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
