@@ -21,7 +21,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DDECE3AE-581A-4D1A-8E40-34725493AED1</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>是否隐藏状态栏</string>
 	<key>IDECodeSnippetTitle</key>

@@ -30,7 +30,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DEB3715E-D880-403B-94AC-437DF9944ED8</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>NvTimelineCreate</string>
 	<key>IDECodeSnippetTitle</key>

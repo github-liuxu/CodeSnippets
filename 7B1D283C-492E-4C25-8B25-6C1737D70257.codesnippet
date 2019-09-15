@@ -23,7 +23,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7B1D283C-492E-4C25-8B25-6C1737D70257</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>创建Label</string>
 	<key>IDECodeSnippetTitle</key>

@@ -18,7 +18,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A82706F4-C191-4829-BD67-BE046348B378</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>创建LiveWindow</string>
 	<key>IDECodeSnippetTitle</key>

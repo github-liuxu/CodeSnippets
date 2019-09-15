@@ -22,7 +22,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>80A34038-69AF-4A71-8A45-831DA659A81C</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>创建collectionView</string>
 	<key>IDECodeSnippetTitle</key>

@@ -25,7 +25,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>73B9AFDB-C659-4306-8DD7-EA64A2C890FB</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>支持的设备朝向</string>
 	<key>IDECodeSnippetTitle</key>

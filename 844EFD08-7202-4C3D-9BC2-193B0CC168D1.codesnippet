@@ -51,7 +51,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>844EFD08-7202-4C3D-9BC2-193B0CC168D1</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>检查资源是否在iCloud上</string>
 	<key>IDECodeSnippetTitle</key>

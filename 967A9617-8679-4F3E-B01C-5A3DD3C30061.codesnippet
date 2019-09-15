@@ -112,7 +112,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>967A9617-8679-4F3E-B01C-5A3DD3C30061</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>下载iCloud资源</string>
 	<key>IDECodeSnippetTitle</key>

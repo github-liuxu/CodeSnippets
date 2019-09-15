@@ -27,7 +27,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DA40674A-917E-485F-BB1A-E59A15F03FF2</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>创建NvsMultiThumbnailSequenceView</string>
 	<key>IDECodeSnippetTitle</key>
