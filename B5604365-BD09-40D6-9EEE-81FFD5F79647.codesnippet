@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string></string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>var videoEditRes : NvsVideoResolution = NvsVideoResolution ()
+        videoEditRes.imageWidth = 720
+        videoEditRes.imageHeight = 1280
+        videoEditRes.imagePAR = NvsRational.init(num: 1, den: 1)
+        var videoFps : NvsRational = NvsRational.init(num: 25, den: 1)
+        var audioEditRes : NvsAudioResolution = NvsAudioResolution()
+        audioEditRes.sampleRate = 48000;
+        audioEditRes.channelCount = 2;
+        audioEditRes.sampleFormat = NvsAudSmpFmt_S16
+        timeline = streamingContext?.createTimeline(&amp;videoEditRes, videoFps: &amp;videoFps, audioEditRes: &amp;audioEditRes)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B5604365-BD09-40D6-9EEE-81FFD5F79647</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>createTimeline</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
