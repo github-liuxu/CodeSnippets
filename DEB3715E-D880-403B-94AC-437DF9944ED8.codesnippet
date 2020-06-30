@@ -9,9 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (NvsTimeline *)createTimeline:(NvEditMode)editMode {
+	<string>- (NvsTimeline *)createTimeline:(CGSize)size {
     NvsStreamingContext *context = [NvsStreamingContext sharedInstance];
-    NvsSize size = [NvTimelineUtils calculateTimelineSize:editMode];
     NvsVideoResolution videoEditRes;
     videoEditRes.imageWidth = size.width;
     videoEditRes.imageHeight = size.height;
